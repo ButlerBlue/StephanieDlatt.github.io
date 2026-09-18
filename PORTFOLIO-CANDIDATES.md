@@ -2,6 +2,16 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Week ending 2026-09-18
+
+**Suggested section:** Case Study
+
+A member sync duplicate-detection bug was quietly rejecting valid relationship records for a specific membership type, one built around a lifetime status rather than a renewing one. My first hypothesis was that the sync used an insert instead of an upsert, but building out real test data disproved that within an hour, which redirected the investigation before it burned days chasing the wrong fix. The actual cause turned out to be in how the platform's deduplication key gets constructed for that membership type, a defect that had only surfaced for one organization so far but was structurally certain to hit every other organization using that same membership type as the platform scaled. I built the diagnostic queries, documented the mechanism, and staffed the fix to engineering instead of patching around it organization by organization.
+
+**Suggested section:** Leadership
+
+An individual's access issue had been bouncing between people for weeks, with repeated manual account fixes that kept failing to stick. The real cause was that the person had multiple unlinked login accounts in the underlying billing platform, so every fix landed on an account they were not actually using to log in. Once I understood why the patch did not hold, I stopped recommending it, routed the actual fix to the team that owns account linking, and flagged that anyone else in that organization with more than one chapter affiliation was probably hitting the identical problem. A fix that has to be reapplied is not a fix. Catching that early meant the effort went toward the systemic cause instead of patching the same account a third time next month.
+
 ## Week ending 2026-09-11
 
 **Suggested section:** Case Study
