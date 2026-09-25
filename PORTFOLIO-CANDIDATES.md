@@ -2,6 +2,12 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Week ending 2026-09-25
+
+**Suggested section:** Case Study
+
+An organization asked me to review a set of chapter accounts it suspected were duplicated, and the fix on the table was to clear an ID field on the extras. I went through all 32 flagged accounts, confirmed 20 genuine duplicate pairs, separated out 2 tangled special cases, and turned up 15 more unrelated duplicates nobody had flagged. The more useful part was explaining why the proposed fix would not have worked: the sync between the two platforms matches records on both an external ID and email, so clearing one key leaves the other still linking the records. We agreed to hold off on changes until the goal of the cleanup is settled, because the right fix depends on what you are actually trying to solve.
+
 ## Deep archive sweep, 2026-09-25
 
 Not a weekly digest — pulled from a full quarterly career archive (2021-2026) built the same day, after a GitHub Projects board search turned up a previously undocumented pre-ticketing-system execution log. Full detail, real names, and ticket numbers live in `research/2026-09-25-quarterly-roi-upskilling-archive.md` in the private repo.
