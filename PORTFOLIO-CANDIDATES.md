@@ -2,6 +2,20 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Writing: A permissions error is not always a permissions problem
+
+**Suggested section:** Writing
+
+Swept from a vendor troubleshooting call on 2026-08-26, not a weekly digest. Shorter LinkedIn version staged in the private repo at `linkedin-calendar/candidates/check-the-version-first.md`.
+
+A vendor's integration could authenticate to Salesforce but could not run a single query. Account not supported, contact not supported, organization not supported. By the time I joined the call, the thread had already gone several rounds, and the working theory was that the integration user simply needed more access. One option on the table was to skip the restricted user entirely and buy the vendor a full license.
+
+I asked two questions instead: can you share your screen, and which API version are you calling? The answer was 52. The user they had been given was a restricted integration license, a license type newer than that version of the API. Every request was being evaluated against rules written before that kind of user existed, so the errors were describing a permissions problem that was not really there yet.
+
+Once the version moved forward, the errors changed, and that was the useful part. Each one now named a real, specific gap, and we closed them one object at a time, deliberately, until every query ran. One error we did not fix by granting access. It asked for a setup-level permission that a production integration user does not get, and the vendor's queries never needed it. Once the real gaps were closed, it stopped appearing.
+
+A full license would probably have worked on the first try. It would also have hidden a configuration gap that every future integrator on the same restricted license would walk straight into. Fixing the narrow path once meant it holds for all of them. When the error says access, check what is judging the request before you start handing access out.
+
 ## Week ending 2026-09-25
 
 **Suggested section:** Case Study
