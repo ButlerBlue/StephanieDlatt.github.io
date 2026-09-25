@@ -16,6 +16,8 @@ Once the version moved forward, the errors changed, and that was the useful part
 
 A full license would probably have worked on the first try. It would also have hidden a configuration gap that every future integrator on the same restricted license would walk straight into. Fixing the narrow path once meant it holds for all of them. When the error says access, check what is judging the request before you start handing access out.
 
+P.S. the bonus is we saved the client another $1,800/year in Salesforce license costs for one of their five free API only user licenses they already had sitting available.
+
 ## Week ending 2026-09-25
 
 **Suggested section:** Case Study
