@@ -2,7 +2,15 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
-## Week ending 2026-09-18
+## Deep archive sweep, 2026-09-25
+
+Not a weekly digest — pulled from a full quarterly career archive (2021-2026) built the same day, after a GitHub Projects board search turned up a previously undocumented pre-ticketing-system execution log. Full detail, real names, and ticket numbers live in `research/2026-09-25-quarterly-roi-upskilling-archive.md` in the private repo.
+
+**Promoted to index.html:** Leadership, "Defining the categories before there was a system to track any of it" — the origin of a still-used internal taxonomy, roughly twenty pre-2024 vendor integrations that had no searchable record until today, and a trainer/trainee contrast from the same era.
+
+**Held back, not used today:**
+- The raw volume figure (roughly twenty integrations across two vendor platforms) could support its own Case Study with more room to breathe, if a future pass wants to build out situation/approach/outcome beats rather than a single Leadership paragraph.
+- Everything about the current comp/title conversation and the stalled internal upgrade programme is explicitly excluded — that's live, unresolved, and internal by nature, not portfolio material regardless of how it's worded.
 
 **Suggested section:** Case Study
 
