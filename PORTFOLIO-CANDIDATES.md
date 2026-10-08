@@ -2,6 +2,12 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Week ending 2026-10-02
+
+**Suggested section:** Case Study
+
+An alumnae-chapter sync gap for one organization traced back to a structural blind spot in how the integration reconciles the two platforms, not a one-off bug. The reconciliation job only re-announces a record when its own source-side copy has changed; if the edit happens on the receiving platform instead, the job has no way to notice the drift and self-correct, so the two sides can stay silently out of sync indefinitely. I walked the mechanism from one member's case up through the pipeline logic to establish that this was not specific to the organization that surfaced it, and filed the defect against the integration itself rather than proposing a workaround scoped to one client.
+
 ## Writing: A permissions error is not always a permissions problem
 
 **Suggested section:** Writing
