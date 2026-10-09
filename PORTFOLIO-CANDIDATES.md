@@ -2,6 +2,16 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Week ending 2026-10-09
+
+**Suggested section:** Case Study
+
+A federated single sign-on system we integrate dozens of client organizations through is deprecating its legacy authentication flow in favor of a more secure standard, moving from an implicit grant to authorization code with PKCE. I drafted both the vendor-facing and client-facing messaging for the change, and rebuilt the full list of affected client organizations and their individual integrations from scratch, cross-checking it against our own CRM in the process, which surfaced data mismatches worth cleaning up before the migration can really get underway.
+
+**Suggested section:** Case Study
+
+For a new client's finance-system rollout, I reused an existing custom-metadata flag pattern instead of flipping the field every other client's sync depends on, letting chapters start syncing into the finance system while still tagged as mid-onboarding. A teammate is rebuilding the portal-access gate around that flag, and we're validating against one chapter before widening the rollout.
+
 ## Week ending 2026-10-02
 
 **Suggested section:** Case Study
