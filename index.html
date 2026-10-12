@@ -4,6 +4,25 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Stephanie Dlatt</title>
+<link rel="canonical" href="https://butlerblue.github.io/StephanieDlatt.github.io/">
+<meta name="description" content="Case studies and writing on Salesforce architecture, integrations, single sign-on, and the security design that decides whether a connector is trustworthy.">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Stephanie Dlatt">
+<meta property="og:title" content="Stephanie Dlatt — Implementation &amp; Integrations">
+<meta property="og:description" content="Behind every record is a person having an actual day. Case studies, leadership examples, and writing on Salesforce architecture, integrations, and SSO.">
+<meta property="og:url" content="https://butlerblue.github.io/StephanieDlatt.github.io/">
+<meta property="og:image" content="https://butlerblue.github.io/StephanieDlatt.github.io/download.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Stephanie Dlatt, Implementation &amp; Integrations: Behind every record is a person having an actual day.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stephanie Dlatt — Implementation &amp; Integrations">
+<meta name="twitter:description" content="Behind every record is a person having an actual day. Case studies, leadership examples, and writing on Salesforce architecture, integrations, and SSO.">
+<meta name="twitter:image" content="https://butlerblue.github.io/StephanieDlatt.github.io/download.png">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23140D1A'/%3E%3Cg fill='none' stroke='%23F03A8F' stroke-width='2'%3E%3Crect x='4' y='9' width='10' height='8' rx='1.5'/%3E%3Crect x='18' y='9' width='10' height='8' rx='1.5'/%3E%3C/g%3E%3Cline x1='6' y1='13' x2='12' y2='13' stroke='%23FFE066' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='20' y1='13' x2='26' y2='13' stroke='%234A2E52' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
   :root {
     --bg: #140D1A;
@@ -192,6 +211,114 @@
       <div class="label">Outcome</div>
       <p>More than forty boxes consolidated to fewer than thirty, described in two published collection guides that are still the public entry point to the collection: <a href="https://indianahistory.org/wp-content/uploads/bureau-of-jewish-education-records.pdf" target="_blank" rel="noopener">the main collection guide</a> and <a href="https://indianahistory.org/wp-content/uploads/bureau-of-jewish-education-records-addition.pdf" target="_blank" rel="noopener">its addition</a>, both completed in spring 2015. It is the same problem I solve in Salesforce today: many records, several names for the same entity, and a user eight months from now who needs to find the right one without knowing who built any of it.</p>
     </div>
+
+    <div class="meta" style="margin-top: 50px;">Identity &amp; Access &middot; Vendor &amp; Client Communication &middot; OAuth Migration</div>
+    <h3>Rebuilding the affected-integrations list from scratch instead of trusting the record</h3>
+
+    <div class="block">
+      <div class="label">Situation</div>
+      <p>A federated single sign-on system we integrate dozens of client organizations through is deprecating its legacy authentication flow in favor of a more secure standard, moving from an implicit grant to authorization code with PKCE. No reliable, current list existed of exactly which client organizations and integrations the change would touch.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Approach</div>
+      <p>Rather than trust whatever list already existed, I rebuilt the full inventory of affected client organizations and their individual integrations from scratch, cross-checking it against our own CRM as I went. I drafted both the vendor-facing and the client-facing messaging for the change separately, so each audience got what actually applied to them instead of one message trying to do both jobs.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Outcome</div>
+      <p>Rebuilding the list instead of trusting it surfaced data mismatches between the CRM and the existing record of integrations, catching them before the migration got underway rather than during it, when they would have shown up as failed logins with no obvious cause.</p>
+    </div>
+
+    <div class="meta" style="margin-top: 50px;">Root-Cause Diagnosis &middot; Integration Architecture &middot; Data Integrity</div>
+    <h3>A sync gap that looked like one chapter's problem until the mechanism said otherwise</h3>
+
+    <div class="block">
+      <div class="label">Situation</div>
+      <p>An alumnae-chapter sync gap surfaced for one organization, and the fix on the table would have treated it as a one-off bug specific to that organization.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Approach</div>
+      <p>I traced the mechanism from one member's case up through the pipeline logic instead of patching the symptom. The reconciliation job only re-announces a record when its own source-side copy has changed; if the edit happens on the receiving platform instead, the job has no way to notice the drift and self-correct, so the two sides can stay silently out of sync indefinitely.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Outcome</div>
+      <p>Establishing that the gap was structural, not organization-specific, meant filing the defect against the integration itself rather than proposing a workaround scoped to the one client that happened to surface it first.</p>
+    </div>
+
+    <div class="meta" style="margin-top: 50px;">Root-Cause Diagnosis &middot; Data Integrity &middot; Membership Platforms</div>
+    <h3>Ruling out the obvious cause before it burned a week chasing the wrong fix</h3>
+
+    <div class="block">
+      <div class="label">Situation</div>
+      <p>A member sync's duplicate-detection logic was quietly rejecting valid relationship records for one specific membership type, a lifetime status rather than a renewing one.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Approach</div>
+      <p>My first hypothesis was that the sync used an insert instead of an upsert. Building out real test data disproved that within an hour, which redirected the investigation before it burned days chasing the wrong fix. The actual cause turned out to be in how the platform's deduplication key gets constructed for that membership type.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Outcome</div>
+      <p>The defect had only surfaced for one organization so far, but was structurally certain to hit every other organization using that same membership type as the platform scaled. I built the diagnostic queries, documented the mechanism, and staffed the fix to engineering instead of patching around it organization by organization.</p>
+    </div>
+
+    <div class="meta" style="margin-top: 50px;">Data Quality &middot; Investigation &middot; Risk Management</div>
+    <h3>32 flagged accounts, and the fix that would not have worked</h3>
+
+    <div class="block">
+      <div class="label">Situation</div>
+      <p>An organization asked for a review of a set of chapter accounts it suspected were duplicated. The fix already on the table was to clear an ID field on the extras.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Approach</div>
+      <p>I went through all 32 flagged accounts individually: confirmed 20 genuine duplicate pairs, separated out 2 tangled special cases, and turned up 15 more unrelated duplicates nobody had flagged.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Outcome</div>
+      <p>The more useful part was explaining why the proposed fix would not have worked. The sync between the two platforms matches records on both an external ID and an email address, so clearing one key leaves the other still linking the records. We agreed to hold off on any changes until the actual goal of the cleanup was settled, since the right fix depends on what you are actually trying to solve.</p>
+    </div>
+
+    <div class="meta" style="margin-top: 50px;">Root-Cause Diagnosis &middot; Sync Architecture &middot; Data Integrity</div>
+    <h3>Fifty records a timestamp-based sync was never going to see</h3>
+
+    <div class="block">
+      <div class="label">Situation</div>
+      <p>A sync had been quietly skipping about fifty member records, and it looked at first like a configuration problem.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Approach</div>
+      <p>Those records qualified for sync through a background recalculation, and the platform does not stamp that kind of change as a real edit, so an incremental sync keyed on modification time never saw them. I forced the timestamp to bring the backlog through, then wrote up the pattern so the same symptom could be recognized elsewhere instead of re-diagnosed one group at a time.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Outcome</div>
+      <p>The fix itself took an afternoon. Naming the class of bug was the part worth keeping.</p>
+    </div>
+
+    <div class="meta" style="margin-top: 50px;">Vendor Diagnosis &middot; Identity &amp; Access &middot; Client Communication</div>
+    <h3>The lockout that will come back unless the fix changes the right thing</h3>
+
+    <div class="block">
+      <div class="label">Situation</div>
+      <p>Members of one organization were getting locked out of a third-party platform, and the vendor's matching logic was the reason: it identified people by email address rather than by their permanent member ID.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Approach</div>
+      <p>That holds up until someone has more than one login or changes their email, which in a membership organization is not an edge case. I wrote the explanation in language the client-facing team could send along without translating it first, and split the next steps explicitly between us, the client, and the vendor so nothing stalled in the gap between three parties.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Outcome</div>
+      <p>The open question I am still holding the vendor to: whether their fix actually switches to the permanent ID, or just refreshes the stored emails and recreates the same problem a year from now.</p>
+    </div>
   </section>
 
   <section id="leadership" class="case-study">
@@ -235,8 +362,23 @@
     </div>
 
     <div class="block">
+      <div class="label">Fixing the cause instead of reapplying the patch</div>
+      <p>An individual's access issue had been bouncing between people for weeks, with repeated manual account fixes that kept failing to stick. The real cause was that the person had multiple unlinked login accounts in the underlying billing platform, so every fix landed on an account they were not actually using to log in. Once I understood why the patch did not hold, I stopped recommending it, routed the actual fix to the team that owns account linking, and flagged that anyone else in that organization with more than one chapter affiliation was probably hitting the identical problem. A fix that has to be reapplied is not a fix. Catching that early meant the effort went toward the systemic cause instead of patching the same account a third time next month.</p>
+    </div>
+
+    <div class="block">
       <div class="label">Producing large-scale events and staffing volunteer leadership</div>
       <p>Earlier in my career, as program staff at a nonprofit federation, I planned and ran events ranging from intimate gatherings of about a hundred people to large-scale fundraising and cultural events drawing up to 3,700 attendees. Part of the role was staffing a board of directors and several volunteer committees, including a philanthropy committee and a next-generation engagement committee I helped build from the ground up: real governance, real budgets, and real competing priorities, just running through volunteers instead of employees.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Naming a permanent limitation instead of promising a fix</div>
+      <p>A reporting gap kept resurfacing because everyone assumed it was a defect waiting on a fix. It was not. The qualification field the sync depends on is packaged, and it structurally cannot return the records in question. I said so plainly instead of leaving room for a fix that was never coming, and got agreement that the manual process is the long-term answer for that organization rather than a stopgap. Calling a permanent limitation permanent is less satisfying than promising a fix, and a great deal more useful to the people planning around it.</p>
+    </div>
+
+    <div class="block">
+      <div class="label">Two no's in the same week, both cheaper than the yes</div>
+      <p>Two access requests landed the same week and both got a no. A vendor asked for admin-level access to a production org; they got a dedicated named login scoped to what they actually need instead. Separately, an organization wanted member statements routed to a shared officer inbox, which would have quietly broken the link between a person's login and their own record. Neither no was the popular answer in the moment. Both were cheaper than the incident that follows the yes.</p>
     </div>
 
     <p style="margin-top: 34px; font-style: italic;">I have already managed a team, built the systems under it, and run programs at a scale most people never get the chance to before a title says they are allowed to. The next title just has to catch up to what I have already done.</p>
