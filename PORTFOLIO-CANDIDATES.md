@@ -8,15 +8,21 @@ Sanitized highlights swept from weekly digests. Staging only, nothing here is pu
 
 A federated single sign-on system we integrate dozens of client organizations through is deprecating its legacy authentication flow in favor of a more secure standard, moving from an implicit grant to authorization code with PKCE. I drafted both the vendor-facing and client-facing messaging for the change, and rebuilt the full list of affected client organizations and their individual integrations from scratch, cross-checking it against our own CRM in the process, which surfaced data mismatches worth cleaning up before the migration can really get underway.
 
+**Promoted to index.html:** Case Study, "Rebuilding the affected-integrations list from scratch instead of trusting the record."
+
 **Suggested section:** Case Study
 
 For a new client's finance-system rollout, I reused an existing custom-metadata flag pattern instead of flipping the field every other client's sync depends on, letting chapters start syncing into the finance system while still tagged as mid-onboarding. A teammate is rebuilding the portal-access gate around that flag, and we're validating against one chapter before widening the rollout.
+
+**Held back, not used today:** still in flight, no resolved outcome yet (validation against one chapter is ongoing). Revisit once the rollout actually widens.
 
 ## Week ending 2026-10-02
 
 **Suggested section:** Case Study
 
 An alumnae-chapter sync gap for one organization traced back to a structural blind spot in how the integration reconciles the two platforms, not a one-off bug. The reconciliation job only re-announces a record when its own source-side copy has changed; if the edit happens on the receiving platform instead, the job has no way to notice the drift and self-correct, so the two sides can stay silently out of sync indefinitely. I walked the mechanism from one member's case up through the pipeline logic to establish that this was not specific to the organization that surfaced it, and filed the defect against the integration itself rather than proposing a workaround scoped to one client.
+
+**Promoted to index.html:** Case Study, "A sync gap that looked like one chapter's problem until the mechanism said otherwise."
 
 ## Writing: A permissions error is not always a permissions problem
 
@@ -34,11 +40,15 @@ A full license would probably have worked on the first try. It would also have h
 
 P.S. the bonus is we saved the client another $1,800/year in Salesforce license costs for one of their five free API only user licenses they already had sitting available.
 
+**Held back, not used today:** the Writing section is framed as posts archived from LinkedIn. Only a shorter version of this is staged for LinkedIn so far (`linkedin-calendar/candidates/check-the-version-first.md`), not confirmed posted. Hold this longer version until that's actually live, so the portfolio doesn't claim an archive of a post that doesn't exist yet.
+
 ## Week ending 2026-09-25
 
 **Suggested section:** Case Study
 
 An organization asked me to review a set of chapter accounts it suspected were duplicated, and the fix on the table was to clear an ID field on the extras. I went through all 32 flagged accounts, confirmed 20 genuine duplicate pairs, separated out 2 tangled special cases, and turned up 15 more unrelated duplicates nobody had flagged. The more useful part was explaining why the proposed fix would not have worked: the sync between the two platforms matches records on both an external ID and email, so clearing one key leaves the other still linking the records. We agreed to hold off on changes until the goal of the cleanup is settled, because the right fix depends on what you are actually trying to solve.
+
+**Promoted to index.html:** Case Study, "32 flagged accounts, and the fix that would not have worked."
 
 ## Deep archive sweep, 2026-09-25
 
@@ -54,9 +64,13 @@ Not a weekly digest — pulled from a full quarterly career archive (2021-2026) 
 
 A member sync duplicate-detection bug was quietly rejecting valid relationship records for a specific membership type, one built around a lifetime status rather than a renewing one. My first hypothesis was that the sync used an insert instead of an upsert, but building out real test data disproved that within an hour, which redirected the investigation before it burned days chasing the wrong fix. The actual cause turned out to be in how the platform's deduplication key gets constructed for that membership type, a defect that had only surfaced for one organization so far but was structurally certain to hit every other organization using that same membership type as the platform scaled. I built the diagnostic queries, documented the mechanism, and staffed the fix to engineering instead of patching around it organization by organization.
 
+**Promoted to index.html:** Case Study, "Ruling out the obvious cause before it burned a week chasing the wrong fix."
+
 **Suggested section:** Leadership
 
 An individual's access issue had been bouncing between people for weeks, with repeated manual account fixes that kept failing to stick. The real cause was that the person had multiple unlinked login accounts in the underlying billing platform, so every fix landed on an account they were not actually using to log in. Once I understood why the patch did not hold, I stopped recommending it, routed the actual fix to the team that owns account linking, and flagged that anyone else in that organization with more than one chapter affiliation was probably hitting the identical problem. A fix that has to be reapplied is not a fix. Catching that early meant the effort went toward the systemic cause instead of patching the same account a third time next month.
+
+**Promoted to index.html:** Leadership, "Fixing the cause instead of reapplying the patch."
 
 ## Week ending 2026-09-11
 
@@ -64,14 +78,22 @@ An individual's access issue had been bouncing between people for weeks, with re
 
 A sync had been quietly skipping about fifty member records, and it turned out not to be a configuration problem at all. Those records qualified for sync through a background recalculation, and the platform does not stamp that kind of change as a real edit, so an incremental sync keyed on modification time never saw them. I forced the timestamp to bring the backlog through, then wrote up the pattern so the same symptom could be recognized elsewhere instead of re-diagnosed one group at a time. The fix took an afternoon. Naming the class of bug was the part worth keeping.
 
+**Promoted to index.html:** Case Study, "Fifty records a timestamp-based sync was never going to see."
+
 **Suggested section:** Case Study
 
 Members of one organization were getting locked out of a third party platform, and the vendor's matching logic was the reason: it identified people by email address rather than by the permanent member ID. That holds up until someone has more than one login or changes their email, which in a membership organization is not an edge case. I wrote the explanation in language the client-facing team could send along without translating it first, and split the next steps explicitly between us, the client, and the vendor so nothing stalled in the gap between three parties. The open question I am still holding the vendor to: whether their fix actually switches to the permanent ID, or just refreshes the stored emails and recreates the same problem a year from now.
+
+**Promoted to index.html:** Case Study, "The lockout that will come back unless the fix changes the right thing."
 
 **Suggested section:** Leadership
 
 A reporting gap kept resurfacing because everyone assumed it was a defect waiting on a fix. It was not. The qualification field the sync depends on is packaged, and it structurally cannot return the records in question. I said so plainly instead of leaving room for a fix that was never coming, and got agreement that the manual process is the long term answer for that organization rather than a stopgap. Calling a permanent limitation permanent is less satisfying than promising a fix, and a great deal more useful to the people planning around it.
 
+**Promoted to index.html:** Leadership, "Naming a permanent limitation instead of promising a fix."
+
 **Suggested section:** Leadership
 
 Two access requests landed the same week and both got a no. A vendor asked for admin level access to a production org; they are getting a dedicated named login scoped to what they actually need instead. Separately, an organization wanted member statements routed to a shared officer inbox, which would have quietly broken the link between a person's login and their own record. Neither no was the popular answer in the moment. Both were cheaper than the incident that follows the yes.
+
+**Promoted to index.html:** Leadership, "Two no's in the same week, both cheaper than the yes."
