@@ -2,6 +2,16 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Week ending 2026-10-16
+
+**Suggested section:** Case Study
+
+Ahead of a historical data migration into a learning-management integration, I ran verification queries against the source and destination record counts before any of it loaded, rather than taking the vendor's export numbers at face value. That check surfaced a duplicate external ID in a file the vendor had resent, the kind of record that would have failed the entire batch if it had gone through unflagged. Confirming counts first turned what would have been a mid-load failure into a five-minute fix before the load ever started.
+
+**Suggested section:** Leadership
+
+A vendor partner building a cross-organization member portal asked for a scoping document and the underlying data to get started. I held both back. The request looked like a standard integration on the surface, but it actually spanned multiple client organizations at once, a different shape of work than our standard process is built around. Before anything goes out externally, it needs to go through internal scoping first, so the commitment matches what we can actually support rather than what looks similar to a request we've handled before.
+
 ## Week ending 2026-10-09
 
 **Suggested section:** Case Study
