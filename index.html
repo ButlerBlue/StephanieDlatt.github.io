@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Stephanie Dlatt</title>
+<title>Stephanie Dlatt | Solutions Architecture, Integrations &amp; Technical Partnerships</title>
 <link rel="canonical" href="https://butlerblue.github.io/StephanieDlatt.github.io/">
-<meta name="description" content="Case studies and writing on Salesforce architecture, integrations, single sign-on, and the security design that decides whether a connector is trustworthy.">
+<meta name="description" content="Stephanie Dlatt works across Salesforce architecture, secure integrations and technical partnerships. Case studies, leadership examples and writing on identity, migration risk and partner strategy.">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Stephanie Dlatt">
-<meta property="og:title" content="Stephanie Dlatt — Implementation &amp; Integrations">
-<meta property="og:description" content="Behind every record is a person having an actual day. Case studies, leadership examples, and writing on Salesforce architecture, integrations, and SSO.">
+<meta property="og:title" content="Stephanie Dlatt | Solutions Architecture, Integrations &amp; Technical Partnerships">
+<meta property="og:description" content="Making complex technology work together. Case studies on secure integration architecture, identity and migration risk, and technical partnerships.">
 <meta property="og:url" content="https://butlerblue.github.io/StephanieDlatt.github.io/">
 <meta property="og:image" content="https://butlerblue.github.io/StephanieDlatt.github.io/download.png">
 <meta property="og:image:width" content="1200">
@@ -18,11 +18,23 @@
 <meta property="og:image:alt" content="Stephanie Dlatt, Implementation &amp; Integrations: Behind every record is a person having an actual day.">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Stephanie Dlatt — Implementation &amp; Integrations">
-<meta name="twitter:description" content="Behind every record is a person having an actual day. Case studies, leadership examples, and writing on Salesforce architecture, integrations, and SSO.">
+<meta name="twitter:title" content="Stephanie Dlatt | Solutions Architecture, Integrations &amp; Technical Partnerships">
+<meta name="twitter:description" content="Making complex technology work together. Case studies on secure integration architecture, identity and migration risk, and technical partnerships.">
 <meta name="twitter:image" content="https://butlerblue.github.io/StephanieDlatt.github.io/download.png">
 
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23140D1A'/%3E%3Cg fill='none' stroke='%23F03A8F' stroke-width='2'%3E%3Crect x='4' y='9' width='10' height='8' rx='1.5'/%3E%3Crect x='18' y='9' width='10' height='8' rx='1.5'/%3E%3C/g%3E%3Cline x1='6' y1='13' x2='12' y2='13' stroke='%23FFE066' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='20' y1='13' x2='26' y2='13' stroke='%234A2E52' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Stephanie Dlatt",
+  "url": "https://butlerblue.github.io/StephanieDlatt.github.io/",
+  "jobTitle": "Implementation Specialist",
+  "description": "Works across Salesforce architecture, secure integrations and technical partnerships.",
+  "knowsAbout": ["Salesforce architecture", "Systems integration", "Single sign-on", "OAuth 2.0", "Identity and access management", "Data migration", "Technical partnerships"],
+  "sameAs": ["https://www.linkedin.com/in/sdlatt", "https://github.com/ButlerBlue"]
+}
+</script>
 <style>
   :root {
     --bg: #140D1A;
@@ -47,7 +59,8 @@
   header.hero { padding: 110px 0 70px; border-bottom: 1px solid var(--muted); }
   header.hero .kicker { font-size: 14px; letter-spacing: 3px; text-transform: uppercase; color: var(--magenta); font-weight: 700; margin-bottom: 22px; }
   header.hero h1 { font-size: 46px; line-height: 1.25; margin-bottom: 20px; }
-  header.hero p.tagline { font-style: italic; font-size: 19px; color: var(--lavender); max-width: 520px; }
+  header.hero p.tagline { font-style: italic; font-size: 19px; color: var(--lavender); max-width: 520px; margin: 34px 0 0; }
+  #about p.tagline { font-style: italic; font-size: 19px; color: var(--yellow); max-width: 560px; }
   nav.top { margin-top: 40px; display: flex; gap: 26px; flex-wrap: wrap; }
   nav.top a { font-size: 14px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; color: var(--lavender); border-bottom: 2px solid transparent; padding-bottom: 4px; }
   nav.top a:hover { color: var(--white); border-bottom-color: var(--magenta); }
@@ -83,13 +96,62 @@
   footer { padding: 60px 0 90px; font-size: 14px; color: #8C7395; }
   footer a { color: var(--lavender); }
   .diagram { margin-bottom: 30px; }
+
+  /* ---- accessibility ---- */
+  .skip { position: absolute; left: -9999px; top: 0; background: var(--magenta); color: var(--white); padding: 12px 18px; z-index: 50; text-decoration: none; }
+  .skip:focus { left: 0; }
+  a:focus-visible, summary:focus-visible, .cta:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; border-radius: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } }
+
+  /* ---- hero additions ---- */
+  header.hero p.promise { font-family: Georgia, "Times New Roman", serif; color: var(--yellow); font-size: 27px; line-height: 1.3; margin: 0 0 22px; max-width: 560px; }
+  header.hero p.lede { font-size: 17px; color: var(--lavender); max-width: 600px; margin: 0 0 18px; }
+  header.hero p.identity { font-size: 14px; letter-spacing: 1px; color: #8C7395; margin: 0 0 30px; }
+  .ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+  .cta { display: inline-block; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; text-decoration: none; padding: 13px 22px; border-radius: 6px; font-weight: 700; }
+  .cta.primary { background: var(--magenta); color: var(--white); }
+  .cta.primary:hover { background: var(--yellow); color: var(--bg); }
+  .cta.secondary { border: 2px solid var(--muted); color: var(--lavender); }
+  .cta.secondary:hover { border-color: var(--magenta); color: var(--white); }
+
+  /* ---- credibility strip ---- */
+  .proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; padding: 44px 0; border-bottom: 1px solid var(--muted); }
+  .proof .fig { font-family: Georgia, "Times New Roman", serif; color: var(--magenta); font-size: 30px; line-height: 1.15; margin-bottom: 8px; }
+  .proof .cap { font-size: 14px; color: var(--lavender); line-height: 1.45; }
+  @media (max-width: 620px) { .proof { grid-template-columns: 1fr; gap: 22px; } }
+
+  /* ---- selected work cards ---- */
+  .cards { display: grid; gap: 22px; margin-bottom: 14px; }
+  .card { background: rgba(255,255,255,0.03); border: 1px solid var(--muted); border-radius: 10px; padding: 26px 28px; }
+  .card .meta { font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #8C7395; margin-bottom: 8px; }
+  .card h3 { font-size: 21px; margin-bottom: 12px; color: var(--white); font-family: Georgia, "Times New Roman", serif; }
+  .card p { font-size: 16px; margin: 0 0 14px; }
+  .card .proves { font-size: 15px; color: #8C7395; margin: 0 0 16px; }
+  .tags { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 16px; }
+  .tags li { font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: var(--lavender); border: 1px solid var(--muted); border-radius: 20px; padding: 5px 12px; }
+  .card .more { font-size: 14px; letter-spacing: 1px; text-transform: uppercase; font-weight: 700; }
+
+  /* ---- capabilities ---- */
+  .caps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+  .caps .cap-group h3 { font-size: 18px; margin-bottom: 10px; color: var(--white); }
+  .caps .cap-group p { font-size: 16px; margin: 0; }
+  @media (max-width: 620px) { .caps { grid-template-columns: 1fr; } }
+
+  /* ---- misc ---- */
+  .section-lede { margin-bottom: 30px; }
+  h2 + .section-lede { margin-top: -6px; }
+  .full-list { margin-top: 56px; padding-top: 10px; }
+  .full-list h3.group { font-size: 15px; letter-spacing: 2px; text-transform: uppercase; color: var(--magenta); font-family: "Segoe UI", -apple-system, sans-serif; margin-bottom: 28px; }
+  #contact .cta { margin-top: 6px; }
+
 </style>
 </head>
 <body>
 
+<a class="skip" href="#about">Skip to content</a>
 <div class="wrap">
   <header class="hero">
-    <svg class="diagram" width="150" height="70" viewBox="0 0 150 70">
+    <svg class="diagram" width="150" height="70" viewBox="0 0 150 70" role="presentation" aria-hidden="true" focusable="false">
       <g fill="none" stroke="#F03A8F" stroke-width="2.2">
         <rect x="4" y="6" width="58" height="46" rx="6"/>
         <rect x="88" y="6" width="58" height="46" rx="6"/>
@@ -107,32 +169,90 @@
       </g>
       <line x1="14" y1="29" x2="48" y2="29" stroke="#FFE066" stroke-width="3.5" stroke-linecap="round"/>
     </svg>
-    <div class="kicker">Implementation &amp; Integrations</div>
+    <div class="kicker">Solutions Architecture + Enterprise Integrations</div>
     <h1>Stephanie Dlatt</h1>
-    <p class="tagline">Behind every record is a person having an actual day.</p>
-    <nav class="top">
+    <p class="promise">Making complex technology work together.</p>
+    <p class="lede">I work across Salesforce architecture, secure integrations and technical partnerships to connect systems, people and business goals. My focus is on practical designs, clear ownership and reliable outcomes when the technology is complex and the stakes are real.</p>
+    <p class="identity">Solutions &amp; Integration Leader &nbsp;&middot;&nbsp; Greater Chicago Area &nbsp;&middot;&nbsp; Remote collaboration</p>
+    <div class="ctas">
+      <a class="cta primary" href="#selected-work">Explore selected work</a>
+      <a class="cta secondary" href="https://www.linkedin.com/in/sdlatt" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+    <nav class="top" aria-label="Sections">
       <a href="#about">About</a>
-      <a href="#case-study">Case Study</a>
+      <a href="#selected-work">Selected Work</a>
       <a href="#leadership">Leadership</a>
       <a href="#writing">Writing</a>
-      <a href="https://www.linkedin.com/in/sdlatt" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <div class="proof" role="list" aria-label="Scope at a glance">
+    <div role="listitem">
+      <div class="fig">Two dozen+</div>
+      <div class="cap">Vendor and integration relationships maintained, several brought in from scratch</div>
+    </div>
+    <div role="listitem">
+      <div class="fig">~100K</div>
+      <div class="cap">Legacy member records within major migration efforts</div>
+    </div>
+    <div role="listitem">
+      <div class="fig">3</div>
+      <div class="cap">CRM client success managers previously led as Support Operations Team Lead</div>
+    </div>
+  </div>
+
+  <main id="main">
   <section id="about">
     <div class="rule"></div>
     <h2>About</h2>
-    <p>I'm an Implementation Specialist building Salesforce architecture: integrations, single sign on, data migrations, and the security and permission design that decides whether a connector is trustworthy or a liability. My days are spent getting systems that were never designed to talk to each other to do it anyway, without either side throwing a fit.</p>
+    <p class="tagline" style="margin:0 0 26px;">Behind every record is a person having an actual day.</p>
+    <p>I build Salesforce architecture: integrations, single sign on, data migrations, and the security and permission design that decides whether a connector is trustworthy or a liability. My days are spent getting systems that were never designed to talk to each other to do it anyway, without either side throwing a fit. My title at re:Members is Implementation Specialist.</p>
     <p>A meaningful share of that work happens before any of it is technical. Evaluating whether a new vendor is actually worth bringing in, negotiating terms that make a partnership worth keeping past the first renewal, and staying the person both sides call when something between two companies needs resolving, not just two systems. I currently maintain more than two dozen partner and integrator relationships built the same way, several of which I helped bring in from scratch rather than inheriting.</p>
     <p>The clients I work with today happen to be membership organizations, fraternities, sororities, foundations, associations, but the actual problem is the same one any company with more than one system runs into: getting disconnected systems to agree on who a person is and what they are allowed to touch. That problem does not care what industry it shows up in.</p>
     <p>I came into this sideways. History and anthropology as my disciplines, a stint in an archive, years in fundraising and operations, then into the systems underneath the organizations I used to work for.</p>
   </section>
 
-  <section id="case-study" class="case-study">
+  <section id="selected-work" class="case-study">
     <div class="rule"></div>
-    <h2>Case Study</h2>
+    <h2>Selected Work</h2>
+    <p class="section-lede">Three pieces of work that show how I decide, not just what I built. The full narratives follow, along with seven more.</p>
+
+    <div class="cards">
+
+      <article class="card">
+        <div class="meta">Salesforce Architecture &middot; Secure APIs &middot; Technical Collaboration</div>
+        <h3>Secure integration architecture for a platform I could not see</h3>
+        <p>Designed the Salesforce-side schema, permission model, packaging strategy and API approach for a partner platform I never had a login to. Worked with the vendor's engineering lead to split responsibilities, verify the Salesforce half myself, and leave behind a reusable production package.</p>
+        <p class="proves">Shows architecture decisions under ambiguity, least-privilege scoping, and reuse across every future client rather than one.</p>
+        <ul class="tags"><li>Schema design</li><li>Least privilege</li><li>Managed packaging</li></ul>
+        <a class="more" href="#cs-no-login">Read case study</a>
+      </article>
+
+      <article class="card">
+        <div class="meta">Migration &middot; Identity &middot; Technical Risk</div>
+        <h3>Identity and migration risk at scale</h3>
+        <p>Worked on migration efforts involving roughly a hundred thousand legacy member records against a billing run that does not move. Rebuilt the Salesforce-side authentication from scratch when earlier patches kept drifting, and argued to keep staging validation when the deadline made skipping it tempting.</p>
+        <p class="proves">Shows root-cause judgment over repeat patching, and a sign-off treated as a risk decision rather than a status check.</p>
+        <ul class="tags"><li>Identity reconciliation</li><li>Production risk</li><li>Root cause</li></ul>
+        <a class="more" href="#cs-auth-rebuild">Read case study</a>
+      </article>
+
+      <article class="card">
+        <div class="meta">Partner Strategy &middot; Technical Diligence &middot; Operational Delivery</div>
+        <h3 id="cs-partner">Bringing in a partner, not just building for one</h3>
+        <p>Helped evaluate, establish and operationalize a technology partnership at company level rather than wiring up one more connector. Weighed technical feasibility against commercial terms, client value, and the internal process needed to keep it working past the first renewal.</p>
+        <p class="proves">Shows technical and commercial range, and partner ownership that outlasts the integration itself.</p>
+        <ul class="tags"><li>Vendor evaluation</li><li>Commercial fit</li><li>Rollout ownership</li></ul>
+        <a class="more" href="#cs-partner">Read case study</a>
+      </article>
+
+    </div>
+
+    <div class="full-list" id="case-study">
+      <h3 class="group">Full case studies</h3>
     <div class="meta">Vendor Integration &middot; Salesforce Architecture &middot; Knowledge Transfer</div>
-    <h3>Building an integration for a system I never had a login to</h3>
+    <h3 id="cs-no-login">Building an integration for a system I never had a login to</h3>
 
     <div class="block">
       <div class="label">Situation</div>
@@ -157,7 +277,7 @@
     </div>
 
     <div class="meta" style="margin-top: 50px;">Production Migration &middot; Identity &amp; Access &middot; Risk Management</div>
-    <h3>Rebuilding an authentication layer that three other fixes hadn't held</h3>
+    <h3 id="cs-auth-rebuild">Rebuilding an authentication layer that three other fixes hadn't held</h3>
 
     <div class="block">
       <div class="label">Situation</div>
@@ -319,12 +439,38 @@
       <div class="label">Outcome</div>
       <p>The open question I am still holding the vendor to: whether their fix actually switches to the permanent ID, or just refreshes the stored emails and recreates the same problem a year from now.</p>
     </div>
+    </div>
+  </section>
+
+  <section id="capabilities">
+    <div class="rule"></div>
+    <h2>Capabilities</h2>
+    <p class="section-lede">Areas of experience, grouped by the outcome they serve rather than by vendor logo.</p>
+    <div class="caps">
+      <div class="cap-group">
+        <h3>Solution architecture</h3>
+        <p>Salesforce object and data modeling, API approaches, data flows, permission design, identity and single sign on, and the tradeoffs between them when there is no clean answer.</p>
+      </div>
+      <div class="cap-group">
+        <h3>Integration leadership</h3>
+        <p>Requirements discovery, production readiness, migration sequencing, root-cause diagnosis, cross-team communication, and knowing when to escalate a risk rather than absorb it.</p>
+      </div>
+      <div class="cap-group">
+        <h3>Technical partnerships</h3>
+        <p>Vendor evaluation, partner onboarding, technical diligence, commercial fit, and owning the relationship and the incident path after launch.</p>
+      </div>
+      <div class="cap-group">
+        <h3>Operational scale</h3>
+        <p>Knowledge transfer, documentation, client-facing enablement, reusable playbooks and process standards, so the work does not depend on remembering who to ask.</p>
+      </div>
+    </div>
   </section>
 
   <section id="leadership" class="case-study">
     <div class="rule"></div>
     <h2>Leadership</h2>
-    <p style="margin-bottom: 34px;">I've managed a team before. The title at my current company just hasn't caught up to that yet.</p>
+    <p class="section-lede">My leadership experience spans direct team management, technical decision-making, cross-functional delivery and building the processes that make good decisions easier to repeat.</p>
+    <p class="section-lede">As a Support Operations Team Lead I managed three CRM client success managers while building the documentation, support practices and self-service resources underneath them. In my integration work I influence decisions across product, engineering, vendors and client teams by making technical risks and tradeoffs understandable. I measure leadership by whether the work gets clearer, the team gets more effective, and fewer problems have to be solved twice.</p>
 
     <div class="block">
       <div class="label">Building and running a support team, not just staffing it</div>
@@ -343,7 +489,7 @@
 
     <div class="block">
       <div class="label">Setting the standard, not just meeting it</div>
-      <p>During a stretch where the team was stacked past what was sustainable, I told people directly how many hours I had and what each commitment actually needed, instead of quietly absorbing the overflow. My manager told the group afterward that's the mindset they want the whole team to run on. I do not think leadership has to wait for a title. I think it is what gets noticed before the title catches up.</p>
+      <p>During a stretch where the team was stacked past what was sustainable, I told people directly how many hours I had and what each commitment actually needed, instead of quietly absorbing the overflow. My manager told the group afterward that's the mindset they want the whole team to run on. Naming your real capacity is not a retreat. It is what makes a commitment worth anything to the person receiving it.</p>
     </div>
 
     <div class="block">
@@ -381,130 +527,93 @@
       <p>Two access requests landed the same week and both got a no. A vendor asked for admin-level access to a production org; they got a dedicated named login scoped to what they actually need instead. Separately, an organization wanted member statements routed to a shared officer inbox, which would have quietly broken the link between a person's login and their own record. Neither no was the popular answer in the moment. Both were cheaper than the incident that follows the yes.</p>
     </div>
 
-    <p style="margin-top: 34px; font-style: italic;">I have already managed a team, built the systems under it, and run programs at a scale most people never get the chance to before a title says they are allowed to. The next title just has to catch up to what I have already done.</p>
+    <p style="margin-top: 34px; font-style: italic;">The thread through all of it: build the structure once, write down why, and hand it over cleanly enough that the next person does not have to find you. That is the work I want more of.</p>
   </section>
 
   <section id="writing">
     <div class="rule"></div>
     <h2>Writing</h2>
-    <p style="margin-bottom: 34px;">Posts from <a href="https://www.linkedin.com/in/sdlatt" target="_blank" rel="noopener">LinkedIn</a>, archived here in full.</p>
+    <p class="section-lede">Posts from <a href="https://www.linkedin.com/in/sdlatt" target="_blank" rel="noopener">LinkedIn</a>, archived here in full, newest first.</p>
 
-    <details class="post-card">
-      <summary><span class="toggle"></span><h3>Introduction</h3></summary>
-      <div class="post-meta">Aug 12, 2026</div>
-      <div class="post-body">Hi, I am Stephanie. New to posting here. Not new to the work.
+    <details class="post-card" open>
+      <summary><span class="toggle"></span><h3>Stop making people earn the answer</h3></summary>
+      <div class="post-meta">Oct 14, 2026</div>
+      <div class="post-body">The fastest way to stop being a bottleneck is to stop making people earn the answer.
 
-I am an Implementation Specialist at re:Members, which is a long way of saying I spend my days getting one system to talk to another without either of them throwing a fit about it. Single sign on, data migrations, API integrations, and the occasional 11 PM "why is this field empty" mystery.
+When someone asks why a sync failed, the instinct is often to walk them toward it. Ask what they think happens when a record does not qualify. The intent is good. It is meant to teach. But when someone is under deadline pressure with a client waiting, they need the fix first. The why lands better right after it.
 
-The organizations I work with are membership based: fraternities, sororities, foundations, associations. Groups built entirely on people showing up for each other. Their technology should make that easier, not harder. That is the whole job.
+The shape I use:
+1. The answer, stated plainly, in the first line.
+2. The why, as a short mechanism. One or two sentences, plain English.
+3. What to do about it.
+4. What to expect next, including anything still unconfirmed.
+5. Then a link to the documentation if they want to go deeper.
 
-I came into this sideways. History and anthropology as my disciplines, a stint in an archive, seven years in nonprofit fundraising and operations, then five years building and repairing the systems underneath organizations like the ones I used to work for. More on that in a few weeks.
+That is how knowledge actually transfers. Not because you drew it out of someone, but because you handed it over cleanly enough that they can use it again next week without you.
 
-I am going to start posting weekly. Expect practical things I learned the hard way, opinions about unique identifiers that I hold far too strongly, and regular reminders that behind every record is an actual human being having an actual day.
-
-Glad you are here. Say hi.</div>
+The goal was never to be needed. It is to not be the only one who can fix it.</div>
     </details>
 
     <details class="post-card">
-      <summary><span class="toggle"></span><h3>I accidentally did requirements analysis</h3></summary>
-      <div class="post-meta">Aug 20, 2026</div>
-      <div class="post-body">I made bingo cards for a Renaissance faire this weekend and accidentally spent an hour doing requirements analysis.
+      <summary><span class="toggle"></span><h3>An email address is not an identity</h3></summary>
+      <div class="post-meta">Oct 7, 2026</div>
+      <div class="post-body">Friendly reminder from someone who has cleaned up the aftermath: an email address is not an identity.
 
-The premise was simple. Six of us, pirate weekend, spot the ridiculous. I wrote twenty-four squares.
+People graduate. They get married. They change jobs. They finally abandon the account they made in eighth grade. Meanwhile the system you built is quietly matching records on that address and creating a brand new person every time someone updates it.
 
-The first draft was useless.
+Now you have one member with four records. Three of them have her history. One of them can actually log in. None of them agree on her last name.
 
-"A peg leg." Does a foam cover count? A costume boot? Someone kneeling on a bent leg? We would have argued about it in the parking lot.
+Use a stable, system-generated ID as your match key. Store it alongside whatever your authentication layer uses, so record matching and login are never fighting over the same field. Treat email as a contact method, which is all it ever was.
 
-So the square became: a genuine peg leg, carved wood, load-bearing, not a foam cover over a bent knee.
+It is not a glamorous rule. It will save you a data cleanup project that eats an entire quarter.
 
-"A dog in costume" became: a dog in a full costume, hat or coat; a bandana does not count.
-
-Somewhere in the second pass I stopped and looked at what I had written. Acceptance criteria. At my desk, on a Friday afternoon, for a bingo card, entirely unprompted.
-
-I have shipped integrations that failed for exactly this reason. "Sync the active members." Active according to whom? The chapter roster, the billing system, or the person who has not paid since March but still turns up to everything? Nobody was wrong. The sentence was.
-
-The faire version costs you a squabble over a turkey leg or a round of grogs. The work version costs you a launch.
-
-Anyway. Six cards, twenty-four squares, one free space. If you spot a stroller rebuilt into a pirate ship, I want to hear about it.</div>
+Ask me how I know. Actually, do not. I am still recovering. 🫣</div>
     </details>
 
     <details class="post-card">
-      <summary><span class="toggle"></span><h3>I did not know I needed it</h3></summary>
-      <div class="post-meta">Aug 26, 2026</div>
-      <div class="post-body">I did not know how much I needed it until it landed.
+      <summary><span class="toggle"></span><h3>The best database training I ever got</h3></summary>
+      <div class="post-meta">Sep 30, 2026</div>
+      <div class="post-body">The best database training I ever got was turning more than forty boxes of records into a collection guide.
 
-Recently, a client wrote to my leadership, unprompted, about the work our team has been doing. A few of us were named. My teammates earned every word, because nobody gets a launch across the line alone.
+I was an archives intern at the Indiana Historical Society, working on more than a hundred years of records from a community organization I also worked for. Documents, photographs, slides, videotapes, and a fair amount of utter mess. By the time I finished, those forty-plus boxes were down to fewer than thirty, arranged and described so someone else could actually use them.
 
-I have still read it more times than I am going to admit here.
+That someone else was the whole point. A collection guide (archivists call it a finding aid) tells a stranger what is in the boxes, how it is organized, and where to find the one thing they came for. I met those strangers once or twice a week when I staffed the reading room: researchers, members, museum visitors, people looking up the history of their own town.
 
-Some context on why it hit the way it did. Membership organizations run on an academic calendar, so summer is when everything has to go live. Students come back, dues cycles start, and the deadline is an actual billing run rather than a date somebody preferred. We have been launching several at once.
+Knowing who it was for was the easy part. Making it work for them was harder, because the organization at the center of the collection went by four different names in seventy years and then merged into another. Someone searching for any one of those names still needed to find all of it.
 
-The last stretch has been validate, freeze, load, verify, repeat. Long days, weekend checks, and the very particular fatigue of being careful for hours at a stretch, because in this work the mistakes are quiet. They do not announce themselves. They surface three weeks later.
+Along the way, the people in those boxes became real to me. I found friends and community members I knew, in their early years, making the impact I had only ever seen the end of. That was a joy. I also met, on paper, the people whose names are on buildings around town, and finally learned why they put them there.
 
-You get through a season like that by keeping your head down. Which is exactly why a note from outside your own building lands the way it does. Nobody asked him to write it. He noticed, and he said so.
+I think about that job almost every week now. A data model is a collection guide. A field name is a description. An organization that merged is a duplicate record waiting to happen. And the person you are really building for is not in the room. They show up eight months from now, looking for one specific thing, with no idea who built any of this.
 
-So if you have thought something good about someone's work recently, send it. Do not save it for their review. Do not assume they already know.
+My route here was not traditional: history and anthropology, an archive, a fundraising shop, then a CRM. Each stop taught me how people actually organize information versus how we wish they would.
 
-I am confident in what I do. I still needed it. Most of the people around you are running on less recognition than you would guess.</div>
+If you are worried your background is too unrelated to count, it is probably load-bearing. You just have not named it yet.
+
+What did an earlier job teach you that you still use every week?</div>
     </details>
 
     <details class="post-card">
-      <summary><span class="toggle"></span><h3>The most expensive sentence</h3></summary>
-      <div class="post-meta">Sep 2, 2026</div>
-      <div class="post-body">The most expensive sentence I hear on an implementation project: "it's just one test record."
+      <summary><span class="toggle"></span><h3>A good launch day is boring</h3></summary>
+      <div class="post-meta">Sep 23, 2026</div>
+      <div class="post-body">A good launch day is boring.
 
-It is never just one test record. That record trips an automation. The automation sends a real email to a real member who was not expecting it. She calls her chapter. Her chapter calls headquarters. Headquarters calls me. It was a Friday. It was 4:45.
+That is not a shrug. It is the entire point, and it takes weeks, if not months or possibly years, of invisible work to earn.
 
-I do not love how avoidable that afternoon was. The record was fine. What was missing was two questions I now ask before anything touches production, no matter how small it looks.
+No heroics. No war room. Nobody sprinting toward a deadline with a laptop open on their knees. Just a sequence of steps already tested, run in the order they were written down, by people who already know who owns what.
 
-What else does this touch. Not just the field I am changing, but the automations, the notifications, the systems downstream that will notice before I do.
+Everything that makes launch day boring happened weeks earlier:
 
-Can I actually undo it. Not "we'll fix it if it's wrong," which is a feeling, not a plan. The real answer, before I need it.
+Validation in a lower environment, so nothing about production surprises anyone.
 
-Small changes are the ones that get skipped past, because they look too minor to bother checking. That is exactly when they get expensive.
+Notifications suppressed before the initial load, so no member receives a hundred emails apologizing for their own existence.
 
-Ask the two questions. Save your Friday.</div>
-    </details>
+A freeze window everyone agreed to in writing, and that nobody quietly works around because they needed just one exception.
 
-    <details class="post-card">
-      <summary><span class="toggle"></span><h3>That's normal for where I sit</h3></summary>
-      <div class="post-meta">Sep 9, 2026</div>
-      <div class="post-body"><div class="beat">
-        <p class="beat-head">I built a Salesforce integration for a system I have never logged into.</p>
-        <p class="beat-body"><em>Here's what that actually took.
-        
-<p>Before any security questions, we had a schema to design. How an application record relates to its reviewers, grades, and comments. What happens when two relationships need to point to the same person? Which identifier survives if an email address changes but a record cannot.</p>
+A confirmed answer to "which system is the source of truth after this," settled before launch instead of discovered during the first disagreement.
 
-<p>An API architecture decision was hidden in a volume question that sounded simple. Five thousand records, moved through synchronous calls capped at two hundred records each. Or an asynchronous bulk job, built for exactly that kind of end-of-cycle load.</p>
+If launch day is thrilling, that is rarely a sign of a bold team. It usually means something got skipped.
 
-<p>And underneath it all, a packaging problem most admins never touch. Which org actually owns the package once you create it? Why a sandbox and a production org authenticate against two different endpoints. What quietly breaks for every future client if that ownership is wrong from the start and nobody catches it early.</em></p>
-      </div>
-      <div class="beat">
-        <p class="beat-head">That's normal for where I sit.</p>
-        <p class="beat-body">New vendor. Little to no context on their side. No login. I work off questions, scoping conversations, and whatever the other engineer can show me.</p>
-      </div>
-      <div class="beat">
-        <p class="beat-head">Most of it was knowledge transfer.</p>
-        <p class="beat-body">What's a permission set, versus a profile. Why "the object is accessible" and "the field has a value" are two different promises, and skipping the second means an integration writes blank fields for weeks before anyone notices.</p>
-      </div>
-      <div class="beat">
-        <p class="beat-head">But most of it wasn't admin work.</p>
-        <p class="beat-body">A schema to design. An API architecture call: two hundred records per synchronous call, or an async bulk job. A packaging decision most admins never touch.</p>
-      </div>
-      <div class="beat">
-        <p class="beat-head">That's architecture and integration design.</p>
-        <p class="beat-body">Not configuration. Some of it was literally writing the query or the API payload myself, not just describing the shape of what he needed.</p>
-      </div>
-      <div class="beat">
-        <p class="beat-head">The permission set was tight, on purpose.</p>
-        <p class="beat-body">Full access on their own data. Read only, named fields, everywhere else. Two versions of the same set, built for two different license types.</p>
-      </div>
-      <div class="beat">
-        <p class="beat-head">Knowledge transfer isn't handing someone a stack of facts.</p>
-        <p class="beat-body">It's deciding which half of the problem is yours to verify, and which half you trust someone else to know better than you do.</p>
-        <blockquote>"They thanked me for being direct about timelines instead of vague. I'll take that over almost any other compliment this project produced."</blockquote>
-      </div></div>
+Aim for boring. Boring is the deliverable. 😴</div>
     </details>
 
     <details class="post-card">
@@ -534,86 +643,132 @@ For those wanting to learn more about a waggle dance, because I certainly did: h
     </details>
 
     <details class="post-card">
-      <summary><span class="toggle"></span><h3>A good launch day is boring</h3></summary>
-      <div class="post-meta">Sep 23, 2026</div>
-      <div class="post-body">A good launch day is boring.
+      <summary><span class="toggle"></span><h3>That's normal for where I sit</h3></summary>
+      <div class="post-meta">Sep 9, 2026</div>
+      <div class="post-body"><div class="beat">
+        <p class="beat-head">I built a Salesforce integration for a system I have never logged into.</p>
+        <p class="beat-body"><em>Here's what that actually took.</em></p>
+        
+<p>Before any security questions, we had a schema to design. How an application record relates to its reviewers, grades, and comments. What happens when two relationships need to point to the same person? Which identifier survives if an email address changes but a record cannot.</p>
 
-That is not a shrug. It is the entire point, and it takes weeks, if not months or possibly years, of invisible work to earn.
+<p>An API architecture decision was hidden in a volume question that sounded simple. Five thousand records, moved through synchronous calls capped at two hundred records each. Or an asynchronous bulk job, built for exactly that kind of end-of-cycle load.</p>
 
-No heroics. No war room. Nobody sprinting toward a deadline with a laptop open on their knees. Just a sequence of steps already tested, run in the order they were written down, by people who already know who owns what.
-
-Everything that makes launch day boring happened weeks earlier:
-
-Validation in a lower environment, so nothing about production surprises anyone.
-
-Notifications suppressed before the initial load, so no member receives a hundred emails apologizing for their own existence.
-
-A freeze window everyone agreed to in writing, and that nobody quietly works around because they needed just one exception.
-
-A confirmed answer to "which system is the source of truth after this," settled before launch instead of discovered during the first disagreement.
-
-If launch day is thrilling, that is rarely a sign of a bold team. It usually means something got skipped.
-
-Aim for boring. Boring is the deliverable. 😴</div>
+<p>And underneath it all, a packaging problem most admins never touch. Which org actually owns the package once you create it? Why a sandbox and a production org authenticate against two different endpoints. What quietly breaks for every future client if that ownership is wrong from the start and nobody catches it early.</p>
+      </div>
+      <div class="beat">
+        <p class="beat-head">That's normal for where I sit.</p>
+        <p class="beat-body">New vendor. Little to no context on their side. No login. I work off questions, scoping conversations, and whatever the other engineer can show me.</p>
+      </div>
+      <div class="beat">
+        <p class="beat-head">Most of it was knowledge transfer.</p>
+        <p class="beat-body">What's a permission set, versus a profile. Why "the object is accessible" and "the field has a value" are two different promises, and skipping the second means an integration writes blank fields for weeks before anyone notices.</p>
+      </div>
+      <div class="beat">
+        <p class="beat-head">But most of it wasn't admin work.</p>
+        <p class="beat-body">A schema to design. An API architecture call: two hundred records per synchronous call, or an async bulk job. A packaging decision most admins never touch.</p>
+      </div>
+      <div class="beat">
+        <p class="beat-head">That's architecture and integration design.</p>
+        <p class="beat-body">Not configuration. Some of it was literally writing the query or the API payload myself, not just describing the shape of what he needed.</p>
+      </div>
+      <div class="beat">
+        <p class="beat-head">The permission set was tight, on purpose.</p>
+        <p class="beat-body">Full access on their own data. Read only, named fields, everywhere else. Two versions of the same set, built for two different license types.</p>
+      </div>
+      <div class="beat">
+        <p class="beat-head">Knowledge transfer isn't handing someone a stack of facts.</p>
+        <p class="beat-body">It's deciding which half of the problem is yours to verify, and which half you trust someone else to know better than you do.</p>
+        <blockquote>"They thanked me for being direct about timelines instead of vague. I'll take that over almost any other compliment this project produced."</blockquote>
+      </div></div>
     </details>
 
     <details class="post-card">
-      <summary><span class="toggle"></span><h3>The best database training I ever got</h3></summary>
-      <div class="post-meta">Sep 30, 2026</div>
-      <div class="post-body">The best database training I ever got was turning more than forty boxes of records into a collection guide.
+      <summary><span class="toggle"></span><h3>The most expensive sentence</h3></summary>
+      <div class="post-meta">Sep 2, 2026</div>
+      <div class="post-body">The most expensive sentence I hear on an implementation project: "it's just one test record."
 
-I was an archives intern at the Indiana Historical Society, working on more than a hundred years of records from a community organization I also worked for. Documents, photographs, slides, videotapes, and a fair amount of utter mess. By the time I finished, those forty-plus boxes were down to fewer than thirty, arranged and described so someone else could actually use them.
+It is never just one test record. That record trips an automation. The automation sends a real email to a real member who was not expecting it. She calls her chapter. Her chapter calls headquarters. Headquarters calls me. It was a Friday. It was 4:45.
 
-That someone else was the whole point. A collection guide (archivists call it a finding aid) tells a stranger what is in the boxes, how it is organized, and where to find the one thing they came for. I met those strangers once or twice a week when I staffed the reading room: researchers, members, museum visitors, people looking up the history of their own town.
+I do not love how avoidable that afternoon was. The record was fine. What was missing was two questions I now ask before anything touches production, no matter how small it looks.
 
-Knowing who it was for was the easy part. Making it work for them was harder, because the organization at the center of the collection went by four different names in seventy years and then merged into another. Someone searching for any one of those names still needed to find all of it.
+What else does this touch. Not just the field I am changing, but the automations, the notifications, the systems downstream that will notice before I do.
 
-Along the way, the people in those boxes became real to me. I found friends and community members I knew, in their early years, making the impact I had only ever seen the end of. That was a joy. I also met, on paper, the people whose names are on buildings around town, and finally learned why they put them there.
+Can I actually undo it. Not "we'll fix it if it's wrong," which is a feeling, not a plan. The real answer, before I need it.
 
-I think about that job almost every week now. A data model is a collection guide. A field name is a description. An organization that merged is a duplicate record waiting to happen. And the person you are really building for is not in the room. They show up eight months from now, looking for one specific thing, with no idea who built any of this.
+Small changes are the ones that get skipped past, because they look too minor to bother checking. That is exactly when they get expensive.
 
-My route here was not traditional: history and anthropology, an archive, a fundraising shop, then a CRM. Each stop taught me how people actually organize information versus how we wish they would.
-
-If you are worried your background is too unrelated to count, it is probably load-bearing. You just have not named it yet.
-
-What did an earlier job teach you that you still use every week?</div>
+Ask the two questions. Save your Friday.</div>
     </details>
 
     <details class="post-card">
-      <summary><span class="toggle"></span><h3>An email address is not an identity</h3></summary>
-      <div class="post-meta">Oct 7, 2026</div>
-      <div class="post-body">Friendly reminder from someone who has cleaned up the aftermath: an email address is not an identity.
+      <summary><span class="toggle"></span><h3>I did not know I needed it</h3></summary>
+      <div class="post-meta">Aug 26, 2026</div>
+      <div class="post-body">I did not know how much I needed it until it landed.
 
-People graduate. They get married. They change jobs. They finally abandon the account they made in eighth grade. Meanwhile the system you built is quietly matching records on that address and creating a brand new person every time someone updates it.
+Recently, a client wrote to my leadership, unprompted, about the work our team has been doing. A few of us were named. My teammates earned every word, because nobody gets a launch across the line alone.
 
-Now you have one member with four records. Three of them have her history. One of them can actually log in. None of them agree on her last name.
+I have still read it more times than I am going to admit here.
 
-Use a stable, system-generated ID as your match key. Store it alongside whatever your authentication layer uses, so record matching and login are never fighting over the same field. Treat email as a contact method, which is all it ever was.
+Some context on why it hit the way it did. Membership organizations run on an academic calendar, so summer is when everything has to go live. Students come back, dues cycles start, and the deadline is an actual billing run rather than a date somebody preferred. We have been launching several at once.
 
-It is not a glamorous rule. It will save you a data cleanup project that eats an entire quarter.
+The last stretch has been validate, freeze, load, verify, repeat. Long days, weekend checks, and the very particular fatigue of being careful for hours at a stretch, because in this work the mistakes are quiet. They do not announce themselves. They surface three weeks later.
 
-Ask me how I know. Actually, do not. I am still recovering. 🫣</div>
+You get through a season like that by keeping your head down. Which is exactly why a note from outside your own building lands the way it does. Nobody asked him to write it. He noticed, and he said so.
+
+So if you have thought something good about someone's work recently, send it. Do not save it for their review. Do not assume they already know.
+
+I am confident in what I do. I still needed it. Most of the people around you are running on less recognition than you would guess.</div>
     </details>
 
-    <details class="post-card" open>
-      <summary><span class="toggle"></span><h3>Stop making people earn the answer</h3></summary>
-      <div class="post-meta">Oct 14, 2026</div>
-      <div class="post-body">The fastest way to stop being a bottleneck is to stop making people earn the answer.
+    <details class="post-card">
+      <summary><span class="toggle"></span><h3>I accidentally did requirements analysis</h3></summary>
+      <div class="post-meta">Aug 20, 2026</div>
+      <div class="post-body">I made bingo cards for a Renaissance faire this weekend and accidentally spent an hour doing requirements analysis.
 
-When someone asks why a sync failed, the instinct is often to walk them toward it. Ask what they think happens when a record does not qualify. The intent is good. It is meant to teach. But when someone is under deadline pressure with a client waiting, they need the fix first. The why lands better right after it.
+The premise was simple. Six of us, pirate weekend, spot the ridiculous. I wrote twenty-four squares.
 
-The shape I use:
-1. The answer, stated plainly, in the first line.
-2. The why, as a short mechanism. One or two sentences, plain English.
-3. What to do about it.
-4. What to expect next, including anything still unconfirmed.
-5. Then a link to the documentation if they want to go deeper.
+The first draft was useless.
 
-That is how knowledge actually transfers. Not because you drew it out of someone, but because you handed it over cleanly enough that they can use it again next week without you.
+"A peg leg." Does a foam cover count? A costume boot? Someone kneeling on a bent leg? We would have argued about it in the parking lot.
 
-The goal was never to be needed. It is to not be the only one who can fix it.</div>
+So the square became: a genuine peg leg, carved wood, load-bearing, not a foam cover over a bent knee.
+
+"A dog in costume" became: a dog in a full costume, hat or coat; a bandana does not count.
+
+Somewhere in the second pass I stopped and looked at what I had written. Acceptance criteria. At my desk, on a Friday afternoon, for a bingo card, entirely unprompted.
+
+I have shipped integrations that failed for exactly this reason. "Sync the active members." Active according to whom? The chapter roster, the billing system, or the person who has not paid since March but still turns up to everything? Nobody was wrong. The sentence was.
+
+The faire version costs you a squabble over a turkey leg or a round of grogs. The work version costs you a launch.
+
+Anyway. Six cards, twenty-four squares, one free space. If you spot a stroller rebuilt into a pirate ship, I want to hear about it.</div>
+    </details>
+
+    <details class="post-card">
+      <summary><span class="toggle"></span><h3>Introduction</h3></summary>
+      <div class="post-meta">Aug 12, 2026</div>
+      <div class="post-body">Hi, I am Stephanie. New to posting here. Not new to the work.
+
+I am an Implementation Specialist at re:Members, which is a long way of saying I spend my days getting one system to talk to another without either of them throwing a fit about it. Single sign on, data migrations, API integrations, and the occasional 11 PM "why is this field empty" mystery.
+
+The organizations I work with are membership based: fraternities, sororities, foundations, associations. Groups built entirely on people showing up for each other. Their technology should make that easier, not harder. That is the whole job.
+
+I came into this sideways. History and anthropology as my disciplines, a stint in an archive, seven years in nonprofit fundraising and operations, then five years building and repairing the systems underneath organizations like the ones I used to work for. More on that in a few weeks.
+
+I am going to start posting weekly. Expect practical things I learned the hard way, opinions about unique identifiers that I hold far too strongly, and regular reminders that behind every record is an actual human being having an actual day.
+
+Glad you are here. Say hi.</div>
     </details>
   </section>
+
+  <section id="contact">
+    <div class="rule"></div>
+    <h2>Contact</h2>
+    <p class="section-lede">The fastest way to reach me is LinkedIn. I am open to conversations about solutions architecture, integration leadership and technical partnership work.</p>
+    <a class="cta primary" href="https://www.linkedin.com/in/sdlatt" target="_blank" rel="noopener">Connect on LinkedIn</a>
+  </section>
+
+  </main>
 
   <footer>
     <p>Stephanie Dlatt &middot; Greater Chicago Area &middot; <a href="https://www.linkedin.com/in/sdlatt" target="_blank" rel="noopener">linkedin.com/in/sdlatt</a></p>
