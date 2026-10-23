@@ -2,6 +2,22 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Week ending 2026-10-23
+
+**Suggested section:** Case Study
+
+A multi-chapter membership organization's member records stopped syncing to the finance platform. I traced it to an inactivated status value on a relationship-type field, which was tripping a validation rule that only lets active types through, and walked the client-facing team through clearing the resulting backlog once the fix was identified.
+
+**Suggested section:** Leadership
+
+A vendor partner's new integration request for an onboarding project came in routed through the client it would ultimately serve, which blurred who actually owned scoping and timing. I reset the intake path so that category of request comes to me directly going forward, then flagged it again when a different contact at the same vendor reached out cold about the same project without going through the new channel.
+
+**Suggested section:** Leadership
+
+An internal workflow-automation setup I'd built for my own documentation updates turned out to be just as useful for a teammate's. I shared it with him this week, and it cut his own documentation-update cycle from taking weeks to taking days.
+
+**Held back, not used today:** a decision this week to move a Salesforce OAuth deadline workstream toward one authentication pattern over another (fits the existing per-client key model with less rework) is still unresolved, waiting on engineering confirmation of where the current token is stored and what depends on it. Revisit once it actually ships, same as the in-flight item held back from the week ending 2026-10-09.
+
 ## Week ending 2026-10-16
 
 **Suggested section:** Case Study
