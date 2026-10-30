@@ -2,6 +2,12 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Week ending 2026-10-30
+
+**Suggested section:** Case Study
+
+A third party vendor's bulk Salesforce export testing kept failing, and the working assumption was that they were hitting the daily API request limit. I checked the actual numbers instead of the assumption: the error was a storage limit, not a request limit. I ruled out leftover test data first (the Recycle Bin was empty), then confirmed against real Storage Usage figures. That redirected their fix to the right constraint, and they are now adding test coverage for both limit scenarios so the two failures can't be confused again.
+
 ## Week ending 2026-10-23
 
 **Suggested section:** Case Study
