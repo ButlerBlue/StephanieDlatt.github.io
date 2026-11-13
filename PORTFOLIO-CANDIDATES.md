@@ -2,6 +2,32 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Week ending 2026-11-13
+
+**Suggested section:** Case Study
+
+A platform-wide push to bring multi-factor authentication to our integration service accounts turned into an exercise in removing the cause rather than working around it. A list of roughly two dozen production logins needing MFA narrowed, after a week of mapping what actually depends on what, to about a dozen that need real structural change. For those, the fix isn't bolting MFA onto a shared account; it's replacing the shared login with individually owned ones, which takes away the reason MFA was ever awkward to add in the first place. Along the way I flagged the two failure modes most likely to break a migration like this without anyone noticing until it's too late: automation written to recognize one specific login that silently stops firing for a different one, and a permission template that, depending on how it's licensed, quietly drops two of the most-used data objects from the very accounts doing the migrating.
+
+**Suggested section:** Leadership
+
+Ahead of a platform's documentation cutover, I edited the new version directly rather than letting it publish with what the old version had quietly accumulated. That caught three links that would have broken on cutover day and restored a security-configuration section after confirming with the platform's own team that the underlying values hadn't changed. The more important piece: I got written confirmation that a specific promise the documentation makes to integration partners, that already-integrated clients keep their current login flow even after the legacy version of the app shuts down, will actually hold, rather than letting that assumption ride into a cutover untested.
+
+## Peer recognition, since mid-September 2026
+
+**Suggested section:** Leadership
+
+Since mid-September, internal peer recognition has logged seven acknowledgements from six different colleagues, plus one additional contribution added to an existing one. Across those, the most frequently applied value tag was collaboration (5 times), followed by reliability and stewardship (3) and initiative (2). Counts only, no quotes: the text of a colleague's recognition is internal correspondence, not something that belongs in a public portfolio.
+
+## Week ending 2026-11-06
+
+**Suggested section:** Leadership
+
+A platform vendor's authentication enforcement deadline landed this week, and the work was less about any one fix than about getting a lot of different parties moving in the same direction before it hit. I made sure partner teams and internal product owners had a heads-up the same morning enforcement went live, requested the access needed to move a cluster of client integrations onto a more secure authentication method across nine separate organizations, and set up the follow-on conversations two different internal product teams need to have with their own vendor counterparts about retiring an older connected-app pattern.
+
+**Suggested section:** Case Study
+
+A payment-to-CRM sync failure for one client looked at first like the same bug a payments vendor had just shipped a fix for elsewhere. It wasn't. I traced it instead to a bug in our own trigger logic, a different failure that happened to produce a similar symptom. Separating the two meant the right root cause went to the right owner instead of getting reverse-engineered from a support thread days later, and the vendor case got reopened with the evidence that actually matched what was happening.
+
 ## Week ending 2026-10-30
 
 **Suggested section:** Case Study
