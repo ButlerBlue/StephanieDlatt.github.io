@@ -2,6 +2,16 @@
 
 Sanitized highlights swept from weekly digests. Staging only, nothing here is published until promoted into index.html by hand. Raw source lives in the private accomplishments repo.
 
+## Week ending 2026-11-20
+
+**Suggested section:** Case Study
+
+A national sorority's billing statements and chapter rosters had drifted apart, and the easy read was a single sync bug. I traced it to three separate causes instead, one of them a pending-resignation status that the finance side still treated as billable. My recommendation was to make that status non-billing, with a balance-owed variant so a member who leaves while still owing money keeps receiving statements, and to collect every status the organization actually uses so deactivations sync the way the client expects rather than the way the default mapping assumes.
+
+**Suggested section:** Leadership
+
+I published an internal reference page documenting the known limits of the sync between our CRM and the finance platform: what it carries, what it doesn't, and where the edge cases live. Rather than treating it as finished, I routed it to the account managers on both sides of the integration for review, so the people answering client questions every day can check it against what they actually see. The goal is that those answers stop having to route through me.
+
 ## Week ending 2026-11-13
 
 **Suggested section:** Case Study
