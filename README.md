@@ -8,6 +8,6 @@ I came into this sideways: history and anthropology, a stint in an archive, year
 
 **Start here**
 - [Partner & Third-Party Integration Playbook](https://github.com/ButlerBlue/integration-playbook): a full, public framework for vendor onboarding, security provisioning, incident response, and partner communication, generalized from several years doing this against a CRM + SSO platform.
-- [Portfolio: case studies and leadership](https://butlerblue.github.io/StephanieDlatt.github.io/): the work behind the résumé, in detail.
-- [Writing](https://butlerblue.github.io/StephanieDlatt.github.io/#writing): posts archived in full.
+- [Portfolio: case studies and leadership](https://stephaniedlatt.com/): the work behind the résumé, in detail.
+- [Writing](https://stephaniedlatt.com/#writing): posts archived in full.
 - [Get in touch: LinkedIn](https://www.linkedin.com/in/sdlatt)
